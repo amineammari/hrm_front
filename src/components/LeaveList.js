@@ -11,7 +11,7 @@ function LeaveList() {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get('/api/leaves', {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/leaves', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -24,7 +24,7 @@ function LeaveList() {
 
   const deleteLeave = async (id) => {
     try {
-      await axios.delete(`/api/leaves/${id}`, {
+      await axios.delete(`https://github.com/amineammari/hrm_back.git/api/leaves/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

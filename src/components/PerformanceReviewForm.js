@@ -18,7 +18,7 @@ function PerformanceReviewForm() {
 
   const fetchPerformanceReview = async (id) => {
     try {
-      const response = await axios.get(`/api/performance-reviews/${id}`, {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/performance-reviews/${id}', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -44,13 +44,13 @@ function PerformanceReviewForm() {
 
     try {
       if (id) {
-        await axios.put(`/api/performance-reviews/${id}`, performanceReview, {
+        await axios.put('https://github.com/amineammari/hrm_back.git/api/performance-reviews/${id}', performanceReview, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
       } else {
-        await axios.post('/api/performance-reviews', performanceReview, {
+        await axios.post('https://github.com/amineammari/hrm_back.git/api/performance-reviews', performanceReview, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

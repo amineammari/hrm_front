@@ -11,7 +11,7 @@ function SalaryList() {
 
   const fetchSalaries = async () => {
     try {
-      const response = await axios.get('/api/salaries', {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/salaries', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -24,7 +24,7 @@ function SalaryList() {
 
   const deleteSalary = async (id) => {
     try {
-      await axios.delete(`/api/salaries/${id}`, {
+      await axios.delete(`https://github.com/amineammari/hrm_back.git/api/salaries/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

@@ -11,7 +11,7 @@ function EmployeeList() {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get('/api/employees', {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/employees', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -24,7 +24,7 @@ function EmployeeList() {
 
   const deleteEmployee = async (id) => {
     try {
-      await axios.delete(`/api/employees/${id}`, {
+      await axios.delete(`https://github.com/amineammari/hrm_back.git/api/employees/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

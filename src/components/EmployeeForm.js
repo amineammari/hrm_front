@@ -23,7 +23,7 @@ function EmployeeForm() {
 
   const fetchEmployee = async (id) => {
     try {
-      const response = await axios.get(`/api/employees/${id}`, {
+      const response = await axios.get(`https://github.com/amineammari/hrm_back.git/api/employees/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -46,13 +46,13 @@ function EmployeeForm() {
     e.preventDefault();
     try {
       if (id) {
-        await axios.put(`/api/employees/${id}`, employee, {
+        await axios.put(`https://github.com/amineammari/hrm_back.git/api/employees/${id}`, employee, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
       } else {
-        await axios.post('/api/employees', employee, {
+        await axios.post('https://github.com/amineammari/hrm_back.git/api/employees', employee, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

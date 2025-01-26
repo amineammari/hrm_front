@@ -11,7 +11,7 @@ function TrainingList() {
 
   const fetchTrainings = async () => {
     try {
-      const response = await axios.get('/api/trainings', {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/trainings', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -24,7 +24,7 @@ function TrainingList() {
 
   const deleteTraining = async (id) => {
     try {
-      await axios.delete(`/api/trainings/${id}`, {
+      await axios.delete(`https://github.com/amineammari/hrm_back.git/api/trainings/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

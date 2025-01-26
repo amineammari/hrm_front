@@ -11,7 +11,7 @@ function PerformanceReviewList() {
 
   const fetchPerformanceReviews = async () => {
     try {
-      const response = await axios.get('/api/performance-reviews', {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/performance-reviews', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -24,7 +24,7 @@ function PerformanceReviewList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/performance-reviews/${id}`, {
+      await axios.delete(`https://github.com/amineammari/hrm_back.git/api/performance-reviews/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

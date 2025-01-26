@@ -20,7 +20,7 @@ function TrainingForm() {
 
   const fetchTraining = async (id) => {
     try {
-      const response = await axios.get(`/api/trainings/${id}`, {
+      const response = await axios.get(`https://github.com/amineammari/hrm_back.git/api/trainings/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -43,13 +43,13 @@ function TrainingForm() {
     e.preventDefault();
     try {
       if (id) {
-        await axios.put(`/api/trainings/${id}`, training, {
+        await axios.put(`https://github.com/amineammari/hrm_back.git/api/trainings/${id}`, training, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
       } else {
-        await axios.post('/api/trainings', training, {
+        await axios.post('https://github.com/amineammari/hrm_back.git/api/trainings', training, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
