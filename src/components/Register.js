@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/register', {
+      const response = await axios.post('https://github.com/amineammari/hrm_back.git/api/register', {
         name,
         email,
         password,

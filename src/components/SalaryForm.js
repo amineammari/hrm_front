@@ -18,7 +18,7 @@ function SalaryForm() {
 
   const fetchSalary = async (id) => {
     try {
-      const response = await axios.get(`/api/salaries/${id}`, {
+      const response = await axios.get('https://github.com/amineammari/hrm_back.git/api/salaries/${id}', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -44,13 +44,13 @@ function SalaryForm() {
 
     try {
       if (id) {
-        await axios.put(`/api/salaries/${id}`, salaryData, {
+        await axios.put('https://github.com/amineammari/hrm_back.git/api/salaries/${id}', salaryData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
       } else {
-        await axios.post('/api/salaries', salaryData, {
+        await axios.post('https://github.com/amineammari/hrm_back.git/api/salaries', salaryData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

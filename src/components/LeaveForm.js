@@ -22,7 +22,7 @@ function LeaveForm() {
 
   const fetchLeave = async (id) => {
     try {
-      const response = await axios.get(`/api/leaves/${id}`, {
+      const response = await axios.get(`https://github.com/amineammari/hrm_back.git/api/leaves/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -45,13 +45,13 @@ function LeaveForm() {
     e.preventDefault();
     try {
       if (id) {
-        await axios.put(`/api/leaves/${id}`, leave, {
+        await axios.put(`https://github.com/amineammari/hrm_back.git/api/leaves/${id}`, leave, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
         });
       } else {
-        await axios.post('/api/leaves', leave, {
+        await axios.post('https://github.com/amineammari/hrm_back.git/api/leaves', leave, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

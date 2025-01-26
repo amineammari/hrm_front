@@ -19,7 +19,7 @@ function NotificationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/notifications', notification, {
+      await axios.post('https://github.com/amineammari/hrm_back.git/api/notifications', notification, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
